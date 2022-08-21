@@ -1,0 +1,39 @@
+.full-width-table {
+    width: 100%;
+    margin: auto;
+    overflow: scroll;
+    height: 50vh;
+}
+.mat-header-cell {
+    text-align: center;
+
+}
+.mat-row:hover{
+    background: #EEEEEE;
+    cursor: pointer;
+
+}
+mat-paginator{
+    position: fixed;
+}
+.mat-cell {
+    text-align: center;
+    justify-content:center;
+}
+.header-align-center{
+    display: flex;
+    padding: 21px 0;
+    justify-content: center;
+}
+.clickable{
+    cursor: pointer;
+}
+mat-paginator{
+    position: relative;
+    bottom: 0px;
+}
+full-costum{
+    background-color: red;
+
+    height: 100vh;
+}
