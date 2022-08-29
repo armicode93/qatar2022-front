@@ -20,7 +20,7 @@ export class PersonneService {
   getOne(cin: number): Observable<Personne> {
     return this.http.get<Personne>(AppSettings.APP_URL + this.controller + cin);
   }
-  getCurrentUser(): Observable<Personne> {
+  /*getCurrentUser(): Observable<Personne> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization':"Bearer " +localStorage.getItem('xAuthToken') });
@@ -28,6 +28,8 @@ export class PersonneService {
 
     return this.http.get<Personne>(AppSettings.APP_URL + this.controller+"user/",options);
   }
+
+   */
 
   AddOne(body: Personne): Observable<Personne> {
     let headers = new HttpHeaders({
@@ -38,6 +40,7 @@ export class PersonneService {
     return this.http.post<Personne>(AppSettings.APP_URL + this.controller+"Inscription", body);
 
   }
+  /*
   AddOneAdmin(body: Personne): Observable<Personne> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -47,6 +50,8 @@ export class PersonneService {
     return this.http.post<Personne>(AppSettings.APP_URL + this.controller+"addAdmin/", body,options);
 
   }
+
+   */
   UpdateOne(body: Personne): Observable<Personne> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',

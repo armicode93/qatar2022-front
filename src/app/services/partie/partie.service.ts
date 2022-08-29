@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {AppSettings} from "../../settings/app.settings";
 import {Partie} from "../../model/Partie";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,8 +14,8 @@ export class PartieService {
     
     controller = 'Partie/';
   
-  findAll(): Observable<any>{
-  return this.http.get(AppSettings.APP_URL + this.controller);
+  findAll(): Observable<Partie[]>{
+  return this.http.get<Partie[]>(AppSettings.APP_URL + this.controller);
   }
 
   getOne(idPartie: number): Observable<Partie>

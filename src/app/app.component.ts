@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Equipe} from "./model/Equipe";
 import {EquipeService} from "./services/equipe/equipe.service";
+import {PartieService} from "./services/partie/partie.service";
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,10 @@ import {EquipeService} from "./services/equipe/equipe.service";
 })
 export class AppComponent implements OnInit{
 
-  constructor(private equipeService: EquipeService) {}
-ngOnInit() {
+  constructor(private equipeService: EquipeService, private  partieService: PartieService) {}
+
+
+  ngOnInit() {
 
 }
 

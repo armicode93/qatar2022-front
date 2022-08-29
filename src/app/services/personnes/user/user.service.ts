@@ -29,4 +29,46 @@ export class UserService {
     return this.http.get<User>(AppSettings.APP_URL + this.controller + cin);
 
   }
+  getCorrentUser(): Observable<User>
+  
+    {
+      let headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':"Bearer " +localStorage.getItem('xAuthToken') });
+      let options = { headers: headers };
+
+      return this.http.get<User>(AppSettings.APP_URL + this.controller+"user/",options);
+    }
+
+    AddOneAdmin(body: User): Observable<User> {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " +localStorage.getItem('xAuthToken') });
+    let options = { headers: headers };
+
+    return this.http.post<User>(AppSettings.APP_URL + this.controller+"addAdmin/", body,options);
+
+  }
+
+  UpdateOne(body: User): Observable<User>
+  {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " +localStorage.getItem('xAuthToken') });
+    let options = { headers: headers };
+
+    return this.http.put<User>(AppSettings.APP_URL + this.controller, body,options);
+
+
+  }
+  DeleteOne(cin: number) {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " +localStorage.getItem('xAuthToken') });
+    let options = { headers: headers };
+
+    return this.http.delete(AppSettings.APP_URL + this.controller + cin,options);
+  }
+
+
 }

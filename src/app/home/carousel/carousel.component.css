@@ -1,0 +1,18 @@
+.picsum-img-wrapper img {
+    max-height: 100vh;
+    height: 50vh;
+    object-fit: cover;
+}
+.overlay-dark{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+    /*background-image: url("/assets/overlay.png") ;*/
+    background: linear-gradient(180deg, rgba(2,0,36,0.896796218487395) 0%, rgba(5,5,5,0.9) 13%, rgba(3,2,23,0.014443277310924318) 64%, rgba(3,1,27,0) 74%, rgba(2,0,36,0.8995973389355743) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}

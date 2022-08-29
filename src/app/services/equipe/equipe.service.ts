@@ -27,6 +27,7 @@ export class EquipeService {
     return this.http.get<Equipe>(AppSettings.APP_URL + this.controller + idEquipe);
   }
 
+
   AddOne(body: Equipe): Observable<Equipe>
   {
     return this.http.post<Equipe>(AppSettings.APP_URL + this.controller,body,this.options);

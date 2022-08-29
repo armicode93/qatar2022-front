@@ -11,7 +11,7 @@ export class Partie{
 
    stade: Stade;
 
-     tour: Tour;
+   tour: Tour;
 
     scoreEq1: number;
 
